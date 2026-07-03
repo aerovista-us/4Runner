@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Parker Toyota 2026 4Runner Interactive Comparison</title>
+<style>
+  :root{
+    --bg:#071018;--panel:#101b25;--panel2:#162638;--ink:#eef7ff;--muted:#9bb0c2;--line:#284052;
+    --blue:#00aeef;--sky:#87ceeb;--green:#8ee06d;--amber:#f3c75f;--red:#ff7b7b;--purple:#c09cff;--white:#fff;--shadow:0 24px 80px rgba(0,0,0,.36);
+  }
+  *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at 15% -10%,#254a66 0,#071018 42%,#04070b 100%);font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial,sans-serif;color:var(--ink);line-height:1.48}
+  a{color:#9be9ff}.wrap{max-width:1240px;margin:auto;padding:28px 18px 80px}.hero{border:1px solid rgba(135,206,235,.22);background:linear-gradient(145deg,rgba(18,28,38,.94),rgba(8,13,20,.94));border-radius:30px;padding:30px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:-2px;background:linear-gradient(110deg,transparent 0 42%,rgba(0,174,239,.11) 43% 50%,transparent 51%),repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 2px,transparent 2px 12px);pointer-events:none}.hero>*{position:relative}.eyebrow{color:var(--blue);font-weight:900;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem}.hero h1{font-size:clamp(2rem,5.2vw,4.8rem);line-height:.94;margin:.35rem 0 1rem;letter-spacing:-.065em}.hero p{max-width:920px;color:#c9d9e8;font-size:1.08rem}.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.chip{border:1px solid var(--line);background:#0e1822;border-radius:999px;padding:9px 12px;color:#cde5f5;font-weight:800;font-size:.9rem}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}@media(max-width:980px){.grid{grid-template-columns:1fr}.hero{padding:22px}}
+  .card{background:linear-gradient(180deg,var(--panel),#0d151d);border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:0 16px 48px rgba(0,0,0,.25);position:relative;overflow:hidden}.card:after{content:"";position:absolute;right:-40px;top:-40px;width:120px;height:120px;border-radius:50%;background:rgba(0,174,239,.08)}.card>*{position:relative}.card h2{margin:0 0 6px;font-size:1.36rem}.price{font-size:2.05rem;font-weight:950;letter-spacing:-.045em}.muted{color:var(--muted)}.vin{font-family:ui-monospace,Consolas,monospace;color:#bfeeff;font-size:.82rem;word-break:break-all}.tag{display:inline-flex;margin:10px 0 0;border:1px solid rgba(0,174,239,.35);background:rgba(0,174,239,.12);color:#c7efff;border-radius:999px;padding:6px 10px;font-weight:900;font-size:.78rem}.tag.green{border-color:rgba(142,224,109,.35);background:rgba(142,224,109,.12);color:#d7ffd0}.tag.amber{border-color:rgba(243,199,95,.35);background:rgba(243,199,95,.12);color:#ffe7a1}.tag.purple{border-color:rgba(192,156,255,.35);background:rgba(192,156,255,.12);color:#eadfff}
+  .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:10px 14px;background:#0e1822;color:#dff6ff;text-decoration:none;font-weight:950}.btn.primary{background:var(--blue);color:#001018;border-color:var(--blue)}.btn:hover{filter:brightness(1.12)}
+  .truck{height:110px;margin:14px 0 4px;position:relative}.body{position:absolute;left:8%;right:8%;bottom:28px;height:38px;border-radius:16px 30px 12px 12px;background:linear-gradient(90deg,#aeb7bc,#e9edf0 40%,#8e989f);box-shadow:inset 0 -8px 0 rgba(0,0,0,.16)}.body.red{background:linear-gradient(90deg,#8d1b24,#f04455 45%,#74141b)}.body.white{background:linear-gradient(90deg,#e9e8df,#fff 45%,#c9c8bf)}.cab{position:absolute;left:28%;bottom:56px;width:38%;height:34px;border-radius:18px 20px 0 0;background:linear-gradient(90deg,#d2dae0,#fff,#b7c1c9)}.cab.red{background:linear-gradient(90deg,#ac2630,#ff5564,#83161d)}.cab.white{background:linear-gradient(90deg,#ebeae5,#fff,#d2d0c9)}.wheel{position:absolute;bottom:13px;width:34px;height:34px;border-radius:50%;background:#05080b;border:7px solid #2d3b48}.w1{left:20%}.w2{right:20%}.rack{position:absolute;left:30%;right:20%;bottom:94px;height:7px;background:#141a20;border-radius:8px}.snorkel{position:absolute;right:17%;bottom:54px;width:8px;height:42px;background:#111820;border-radius:8px}.skid{position:absolute;left:18%;right:18%;bottom:25px;height:5px;background:#9a7c37;border-radius:10px}
+  .section{margin-top:28px;background:rgba(18,28,38,.76);border:1px solid var(--line);border-radius:26px;padding:22px}.section h2{margin:0 0 10px;font-size:1.7rem}.section h3{margin:18px 0 8px}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:820px){.two{grid-template-columns:1fr}}
+  .feature{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}.feature:last-child{border-bottom:0}.icon{width:36px;height:36px;display:grid;place-items:center;border-radius:12px;background:rgba(0,174,239,.12);border:1px solid rgba(0,174,239,.25);flex:0 0 auto}.feature b{display:block}.feature span{color:var(--muted);font-size:.95rem}.replace{display:block;margin-top:6px;color:#dfefff!important;background:#0a131b;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:8px;font-size:.88rem!important}.replace strong{color:#fff}.upgrade-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}@media(max-width:980px){.upgrade-grid{grid-template-columns:1fr}}.upgrade-card{border:1px solid var(--line);border-radius:20px;background:#0d161f;padding:16px}.upgrade-card h3{margin-top:0}.upgrade-card ul{margin:8px 0 0;padding-left:19px;color:#c7d8e6}.upgrade-card li{margin:7px 0}.swap{margin-top:10px;border-top:1px dashed rgba(255,255,255,.15);padding-top:10px;color:#b9ccdb;font-size:.92rem}.swap b{color:#fff}
+  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.tab{cursor:pointer;border:1px solid var(--line);background:#0b151e;color:#d7eaf7;padding:10px 14px;border-radius:999px;font-weight:950}.tab.active{background:var(--blue);color:#001018;border-color:var(--blue)}.panel{display:none}.panel.active{display:block}.bar{height:13px;border-radius:999px;background:#0b141d;overflow:hidden;border:1px solid var(--line)}.fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--green));width:50%}.score{display:grid;grid-template-columns:170px 1fr 48px;gap:12px;align-items:center;margin:12px 0}@media(max-width:740px){.score{grid-template-columns:1fr}.score b{margin-top:8px}}
+  .callout{border-left:5px solid var(--blue);background:rgba(0,174,239,.09);padding:16px;border-radius:14px;margin:16px 0}.warn{border-left-color:var(--amber);background:rgba(243,199,95,.09)}.decision{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}@media(max-width:920px){.decision{grid-template-columns:1fr}}.mini{padding:16px;border:1px solid var(--line);border-radius:18px;background:#0d161f}.mini h3{margin:0 0 8px}.mini ul{margin:8px 0 0;padding-left:20px;color:#c7d8e6}.sources{font-size:.85rem;color:#93aabd}.footer{margin-top:26px;color:#8198aa;font-size:.85rem}.matrix{width:100%;border-collapse:separate;border-spacing:0 8px}.matrix th{text-align:left;color:#a9c1d2;font-size:.85rem}.matrix td{background:#0d161f;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px;vertical-align:top}.matrix td:first-child{border-left:1px solid var(--line);border-radius:14px 0 0 14px;font-weight:850}.matrix td:last-child{border-right:1px solid var(--line);border-radius:0 14px 14px 0}@media(max-width:760px){.matrix,.matrix tbody,.matrix tr,.matrix td,.matrix th{display:block}.matrix thead{display:none}.matrix td{border-radius:0!important;border-left:1px solid var(--line);border-right:1px solid var(--line);margin:0}.matrix td:first-child{border-radius:14px 14px 0 0!important}.matrix td:last-child{border-radius:0 0 14px 14px!important;margin-bottom:10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">AeroVista Vehicle Decision Lab</div>
+    <h1>2026 4Runner Hybrid: Parker Comparison</h1>
+    <p>An interactive review page for the current Parker Toyota options: the value-focused TRD Off-Road Hybrid, the tech-and-comfort TRD Off-Road Premium Hybrid, and the factory-overland Trailhunter Hybrid. This version adds direct dealer links and a clearer “what replaces what” upgrade map.</p>
+    <div class="chips">
+      <span class="chip">Direct dealer links included</span>
+      <span class="chip">Premium interior explained</span>
+      <span class="chip">Trailhunter factory-overland hardware mapped</span>
+      <span class="chip">Use for negotiation + client review</span>
+    </div>
+  </header>
+
+  <section class="grid" aria-label="Vehicle cards">
+    <article class="card" id="offroad">
+      <div class="truck"><div class="cab"></div><div class="body"></div><div class="wheel w1"></div><div class="wheel w2"></div></div>
+      <h2>TRD Off-Road Hybrid</h2>
+      <div class="price">$57.1k-ish</div>
+      <p class="muted">Lowest local hybrid entry point. Best if you want the powertrain and core off-road hardware, then build your own AeroVista package later.</p>
+      <p class="vin">Seen at Parker: VIN JTEVB5BR3T5045090 / similar VIN JTEVB5BRXT5035270</p>
+      <span class="tag green">Best value canvas</span>
+      <div class="btnrow"><a class="btn primary" href="https://www.parkertoyota.com/inventory/new-2026-toyota-4runner-i-force-max-trd-off-road-i-force-max-pt4wd-4wd-trd-off-rd-jtevb5br3t5045090/" target="_blank" rel="noopener">Open dealer page →</a><a class="btn" href="#matrix">Compare features</a></div>
+    </article>
+    <article class="card" id="premium">
+      <div class="truck"><div class="cab red"></div><div class="body red"></div><div class="wheel w1"></div><div class="wheel w2"></div></div>
+      <h2>TRD Off-Road Premium Hybrid</h2>
+      <div class="price">$60.5k-ish</div>
+      <p class="muted">The practical sweet spot: hybrid torque, off-road hardware, premium interior, larger screen, better comfort, and stronger daily usability.</p>
+      <p class="vin">VIN: JTEVB5BRXT5044048 • Stock: 2606960</p>
+      <span class="tag">Recommended balance</span>
+      <div class="btnrow"><a class="btn primary" href="https://www.parkertoyota.com/inventory/new-2026-toyota-4runner-i-force-max-trd-off-road-premium-i-force-max-pt4wd-4wd-trd-off-rd-prem-jtevb5brxt5044048/" target="_blank" rel="noopener">Open dealer page →</a><a class="btn" href="#premium-explain">Premium upgrades</a></div>
+    </article>
+    <article class="card" id="trailhunter">
+      <div class="truck"><div class="rack"></div><div class="snorkel"></div><div class="cab white"></div><div class="body white"></div><div class="skid"></div><div class="wheel w1"></div><div class="wheel w2"></div></div>
+      <h2>Trailhunter Hybrid</h2>
+      <div class="price">$71.1k-ish</div>
+      <p class="muted">Factory-overland flagship. More expensive, but it comes with expedition hardware already baked in instead of needing a full aftermarket build.</p>
+      <p class="vin">VIN: JTEVB5BR4T5049620 • Stock: 2611010</p>
+      <span class="tag amber">Factory basecamp</span>
+      <div class="btnrow"><a class="btn primary" href="https://www.parkertoyota.com/inventory/new-2026-toyota-4runner-i-force-max-trailhunter-pt4wd-sport-utility-jtevb5br4t5049620/" target="_blank" rel="noopener">Open dealer page →</a><a class="btn" href="#trailhunter-explain">Trailhunter upgrades</a></div>
+    </article>
+  </section>
+
+  <section class="section" id="matrix">
+    <h2>At-a-glance: what changes as you move up</h2>
+    <p class="muted">The base Off-Road Hybrid buys the drivetrain and trail fundamentals. Premium adds the cabin and convenience upgrades. Trailhunter adds factory overland equipment.</p>
+    <table class="matrix">
+      <thead><tr><th>Category</th><th>TRD Off-Road Hybrid</th><th>TRD Off-Road Premium Hybrid</th><th>Trailhunter Hybrid</th></tr></thead>
+      <tbody>
+        <tr><td>Primary reason to buy</td><td>Lowest hybrid price and best custom-build canvas.</td><td>Best mix of tech, comfort, capability, and resale-friendly equipment.</td><td>Factory-built overland rig with premium trail hardware included.</td></tr>
+        <tr><td>Interior feel</td><td>Capable but more basic. You get the new platform, but not the full premium cabin effect.</td><td>SofTex, heated/ventilated seats, heated wheel, better audio, liftgate convenience.</td><td>Premium cabin plus rugged Trailhunter identity and overland-specific hardware.</td></tr>
+        <tr><td>Tech focus</td><td>Modern compared with your 2018, but fewer premium layers.</td><td>Big-screen / camera / audio / convenience package is the real upgrade.</td><td>Premium tech plus expedition functions like onboard air and overland gear.</td></tr>
+        <tr><td>Build strategy</td><td>Buy cheaper, add only what you want.</td><td>Buy the right interior first, then add controlled exterior upgrades.</td><td>Pay more upfront for warranty-friendly factory overland equipment.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section" id="premium-explain">
+    <h2>Premium package: what are you actually paying for?</h2>
+    <p class="muted">This is the upgrade that makes the 2026 feel like a real jump from your paid-off 2018 TRD Pro. Toyota’s own 4Runner page lists TRD Off-Road Premium i-FORCE MAX above TRD Off-Road, and public trim guides identify the Premium step with SofTex heated/ventilated front seats, hands-free power liftgate, 14-inch touchscreen, JBL audio, and Multi-Terrain Monitor. Always verify exact equipment on the Monroney for the VIN before signing.</p>
+    <div class="two">
+      <div>
+        <div class="feature"><div class="icon">🖥️</div><div><b>14-inch multimedia screen</b><span>The larger command-center style screen is one of the biggest daily-use reasons to move to Premium.</span><span class="replace"><strong>Replaces / improves over:</strong> the lower-trim/smaller screen setup and the much older 2018 cabin tech.</span></div></div>
+        <div class="feature"><div class="icon">📷</div><div><b>Multi-Terrain Monitor / better camera utility</b><span>Selectable camera views help in tight trails, parking, snowbanks, rocky approaches, and trailer positioning.</span><span class="replace"><strong>Replaces / improves over:</strong> basic backup-camera-only thinking. This is trail visibility, not just parking visibility.</span></div></div>
+        <div class="feature"><div class="icon">🪑</div><div><b>SofTex heated + ventilated front seats</b><span>More comfortable, easier to clean, and more livable for long drives, hot summer days, and winter mornings.</span><span class="replace"><strong>Replaces / improves over:</strong> cloth/basic seat experience on lower trims.</span></div></div>
+      </div>
+      <div>
+        <div class="feature"><div class="icon">🔊</div><div><b>JBL premium audio</b><span>Better road-trip, camping, and mobile-work audio experience.</span><span class="replace"><strong>Replaces / improves over:</strong> standard audio setup.</span></div></div>
+        <div class="feature"><div class="icon">🚪</div><div><b>Hands-free power liftgate + power rear window convenience</b><span>Useful when loading dogs, drones, Surron gear, camera bags, groceries, and winter gear.</span><span class="replace"><strong>Replaces / improves over:</strong> manual hatch behavior / less convenient rear access.</span></div></div>
+        <div class="feature"><div class="icon">🔥</div><div><b>Heated steering wheel + premium controls</b><span>Small feature, big daily effect in North Idaho.</span><span class="replace"><strong>Replaces / improves over:</strong> cold steering wheel / more basic control package.</span></div></div>
+      </div>
+    </div>
+    <div class="callout">Plain English: Premium buys the <b>new-car experience</b>. The base Off-Road Hybrid already has the big torque jump. Premium is what makes the cabin feel like a modern command rig instead of just a newer trail truck.</div>
+  </section>
+
+  <section class="section" id="trailhunter-explain">
+    <h2>Trailhunter: unique upgrades and what they replace</h2>
+    <p class="muted">Trailhunter is not just “Premium plus badges.” Toyota and ARB position it as a factory overlanding grade. Toyota Pressroom states Trailhunter includes the i-FORCE MAX hybrid powertrain, Old Man Emu suspension, high-strength steel skid plates, high-mount air intake, and onboard air compressor. ARB notes the 4Runner Trailhunter also uses ARB roof rack and side-rail hardware.</p>
+    <div class="upgrade-grid">
+      <div class="upgrade-card"><h3>Old Man Emu suspension</h3><ul><li>Factory overland-tuned suspension from ARB/OME family.</li><li>Designed for rough-road control and load confidence.</li></ul><div class="swap"><b>Replaces:</b> standard TRD Off-Road suspension as the starting point. Reduces need to immediately buy aftermarket lift/shock package.</div></div>
+      <div class="upgrade-card"><h3>ARB roof rack / trail hardware</h3><ul><li>Factory adventure rack setup.</li><li>Better ready-for-gear starting point for recovery boards, cases, awning, or camp storage.</li></ul><div class="swap"><b>Replaces:</b> basic roof/crossbar setup. Saves an early rack purchase if you like the factory setup.</div></div>
+      <div class="upgrade-card"><h3>High-strength skid plates</h3><ul><li>Added underbody protection for rocks, ruts, and forest roads.</li><li>More confidence before aftermarket armor.</li></ul><div class="swap"><b>Replaces:</b> lighter standard protection. Reduces need for immediate skid-plate shopping.</div></div>
+      <div class="upgrade-card"><h3>High-mount air intake</h3><ul><li>Improves dusty-trail and splash-zone confidence.</li><li>Strong Trailhunter visual signature.</li></ul><div class="swap"><b>Replaces:</b> standard intake placement. Not a license for deep-water abuse, but better suited to trail conditions.</div></div>
+      <div class="upgrade-card"><h3>Onboard air compressor</h3><ul><li>Air down for trails, air up before highway.</li><li>Useful for tires, gear, and remote convenience.</li></ul><div class="swap"><b>Replaces:</b> separate portable compressor purchase and storage.</div></div>
+      <div class="upgrade-card"><h3>Factory overland identity</h3><ul><li>Higher trim cachet and stronger built-from-factory story.</li><li>Potentially cleaner warranty/resale narrative than a heavily modified ORP.</li></ul><div class="swap"><b>Replaces:</b> a pieced-together aftermarket build if you want a turn-key rig.</div></div>
+    </div>
+    <div class="callout warn"><b>Money logic:</b> the Trailhunter jump is only worth it if you would buy most of this hardware anyway. If you want a very specific AeroVista Ghost Camo build, the Premium Hybrid may be the smarter canvas.</div>
+  </section>
+
+  <section class="section">
+    <h2>Unique upgrade story by truck</h2>
+    <div class="decision">
+      <div class="mini"><h3>TRD Off-Road Hybrid</h3><p><b>Unique value:</b> lowest-cost hybrid trail platform.</p><ul><li>i-FORCE MAX torque</li><li>TRD off-road foundation</li><li>Most remaining budget for wrap, wheels, tires, rack, lights</li></ul><p class="muted"><b>What it gives up:</b> premium interior convenience and factory overland hardware.</p></div>
+      <div class="mini"><h3>TRD Off-Road Premium Hybrid</h3><p><b>Unique value:</b> best daily-driver upgrade.</p><ul><li>14-inch screen / better camera experience</li><li>SofTex heated/ventilated seats</li><li>JBL audio, heated wheel, power liftgate convenience</li></ul><p class="muted"><b>What it gives up:</b> Trailhunter’s factory rack, OME suspension, onboard air, high-mount intake, heavier armor.</p></div>
+      <div class="mini"><h3>Trailhunter Hybrid</h3><p><b>Unique value:</b> most complete factory overland rig.</p><ul><li>OME suspension</li><li>ARB rack/side rail family</li><li>Onboard air, skid plates, high-mount intake</li></ul><p class="muted"><b>What it gives up:</b> lower purchase price and full freedom to choose every aftermarket part yourself.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Interactive decision guide</h2>
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="daily">Daily comfort</button>
+      <button class="tab" data-tab="build">Aftermarket build</button>
+      <button class="tab" data-tab="overland">Factory overland</button>
+      <button class="tab" data-tab="money">Money logic</button>
+    </div>
+    <div id="daily" class="panel active">
+      <div class="score"><b>Off-Road Hybrid</b><div class="bar"><div class="fill" style="width:58%"></div></div><span>58</span></div>
+      <div class="score"><b>Off-Road Premium</b><div class="bar"><div class="fill" style="width:90%"></div></div><span>90</span></div>
+      <div class="score"><b>Trailhunter</b><div class="bar"><div class="fill" style="width:84%"></div></div><span>84</span></div>
+      <p class="muted">Premium wins daily life because the upgrade is felt every time you sit in it: seats, screen, cameras, audio, liftgate, and interior polish.</p>
+    </div>
+    <div id="build" class="panel">
+      <div class="score"><b>Off-Road Hybrid</b><div class="bar"><div class="fill" style="width:93%"></div></div><span>93</span></div>
+      <div class="score"><b>Off-Road Premium</b><div class="bar"><div class="fill" style="width:86%"></div></div><span>86</span></div>
+      <div class="score"><b>Trailhunter</b><div class="bar"><div class="fill" style="width:70%"></div></div><span>70</span></div>
+      <p class="muted">The base Off-Road Hybrid leaves the most budget for a custom AeroVista Ghost Camo build. Premium is the better starting point if you want the nice interior first.</p>
+    </div>
+    <div id="overland" class="panel">
+      <div class="score"><b>Off-Road Hybrid</b><div class="bar"><div class="fill" style="width:62%"></div></div><span>62</span></div>
+      <div class="score"><b>Off-Road Premium</b><div class="bar"><div class="fill" style="width:72%"></div></div><span>72</span></div>
+      <div class="score"><b>Trailhunter</b><div class="bar"><div class="fill" style="width:96%"></div></div><span>96</span></div>
+      <p class="muted">Trailhunter is the turn-key overland answer: OME suspension, ARB rack, skid plates, high-mount intake, and onboard air are the headline reasons it costs more.</p>
+    </div>
+    <div id="money" class="panel">
+      <div class="score"><b>Off-Road Hybrid</b><div class="bar"><div class="fill" style="width:95%"></div></div><span>95</span></div>
+      <div class="score"><b>Off-Road Premium</b><div class="bar"><div class="fill" style="width:91%"></div></div><span>91</span></div>
+      <div class="score"><b>Trailhunter</b><div class="bar"><div class="fill" style="width:64%"></div></div><span>64</span></div>
+      <p class="muted">Best financial logic: Premium Hybrid if you want the tech upgrade. Base Off-Road Hybrid if you want maximum build budget. Trailhunter only if factory-overland equipment is worth the $10k+ jump to you.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Final read</h2>
+    <div class="callout"><b>My pick for Timbr:</b> TRD Off-Road Premium Hybrid unless the Trailhunter equipment truly replaces aftermarket parts you were already going to buy. Premium hits the exact stated want: big tech upgrade, power/liftgate convenience, modern interior, and hybrid torque while keeping budget alive for AeroVista Ghost Camo.</div>
+    <div class="callout warn"><b>Before negotiating:</b> ask Parker for the Monroney window sticker and dealer addendum for each VIN. The addendum is where the real comparison lives: factory equipment vs port options vs dealer-installed accessories vs markup.</div>
+  </section>
+
+  <section class="section sources">
+    <h2>Source notes</h2>
+    <p>Inventory and pricing can change quickly. Verify all prices, mileage, availability, and options directly with Parker before negotiation.</p>
+    <ul>
+      <li>Parker Toyota i-FORCE MAX inventory page: <a href="https://www.parkertoyota.com/new-vehicles/4runner-i-force-max/" target="_blank" rel="noopener">parkertoyota.com/new-vehicles/4runner-i-force-max/</a></li>
+      <li>Parker Premium VIN JTEVB5BRXT5044048: <a href="https://www.parkertoyota.com/inventory/new-2026-toyota-4runner-i-force-max-trd-off-road-premium-i-force-max-pt4wd-4wd-trd-off-rd-prem-jtevb5brxt5044048/" target="_blank" rel="noopener">Parker detail page</a></li>
+      <li>Parker Trailhunter VIN JTEVB5BR4T5049620: <a href="https://www.parkertoyota.com/inventory/new-2026-toyota-4runner-i-force-max-trailhunter-pt4wd-sport-utility-jtevb5br4t5049620/" target="_blank" rel="noopener">Parker detail page</a></li>
+      <li>Toyota official 4Runner overview: <a href="https://www.toyota.com/4runner/" target="_blank" rel="noopener">toyota.com/4runner</a></li>
+      <li>Toyota Trailhunter grade overview: <a href="https://pressroom.toyota.com/toyotas-trailhunter-grade-features-that-elevate-the-tacoma-and-4runner-overlanding-experience/" target="_blank" rel="noopener">Toyota Pressroom Trailhunter overview</a></li>
+      <li>ARB 4Runner Trailhunter collaboration notes: <a href="https://arbusa.com/news/arb-collaborates-with-toyota-on-the-new-4runner-trailhunter" target="_blank" rel="noopener">ARB USA overview</a></li>
+    </ul>
+  </section>
+  <div class="footer">Prepared for Timbr / AeroVista. Use as a client-facing decision support page, not a purchase order.</div>
+</div>
+<script>
+  document.querySelectorAll('.tab').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
